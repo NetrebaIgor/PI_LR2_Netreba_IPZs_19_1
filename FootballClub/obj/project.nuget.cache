@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "AQ/CK9XU4bufNEkbuzj2k68eqy1AhJ9gCYaamum2PopHVFhoJuDW1qorlO2mEFSeKi5cvS+cXl4dZcKzUbmb+g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Igor\\source\\repos\\FootballClub\\FootballClub\\FootballClub.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Igor\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Igor\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,79 @@
+﻿@using FootballClub.Models
+@model FC[]
+<head>
+    <meta charset="utf-9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Club</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/home.css" />
+
+</head>
+
+<body>
+    @{int sum = 0 , avgR = 0 , avgDEF = 0, avgDRI = 0, avgPAC = 0, avgPAS = 0, avgPHY = 0, avgSHO = 0;
+        foreach (FC p in Model) {
+            sum += p.Price;
+            avgDEF += p.DEF;
+            avgDRI += p.DRI;
+            avgPAC += p.PAC;
+            avgPAS += p.PAS;
+            avgPHY += p.PHY;
+            avgSHO += p.SHO;
+            avgR += p.Raiting;
+        }
+        avgDEF /= 11;
+        avgDRI /= 11;
+        avgPAC /= 11;
+        avgPAS /= 11;
+        avgPHY /= 11;
+        avgSHO /= 11;
+        avgR /= 11;
+    }
+
+    <table class="table_dark">
+        <tbody>
+            <tr><th>Name</th><th>Price</th><th>Defending</th><th>Dribbling</th><th>Pace</th><th>Passing</th><th>Physical</th><th>Shooting</th><th>Raiting</th></tr>
+            @foreach (FC p in Model)
+            {
+                <tr>
+                    <td>@p.Name   </td>
+                    <td>  @p.Price mil$  </td>
+                    <td> @p.DEF   </td>
+                    <td> @p.DRI  </td>
+                    <td> @p.PAC   </td>
+                    <td> @p.PAS   </td>
+                    <td> @p.PHY   </td>
+                    <td> @p.SHO   </td>
+                    <td> @p.Raiting   </td>
+                </tr>
+
+            }
+            <tr>
+                <td colspan="9">
+                    Price sum :
+                    @sum milions $
+                </td>
+            </tr>
+            <tr> <td colspan="9">Avg Raiting  : @avgR</td> </tr>
+            <tr> <td colspan="9">Avg Defending : @avgDEF</td> </tr>
+            <tr> <td colspan="9">Avg Dribbling  : @avgDRI</td> </tr>
+            <tr> <td colspan="9">Avg Pace  : @avgPAC</td> </tr>
+            <tr> <td colspan="9">Avg Passing  : @avgPAS</td> </tr>
+            <tr> <td colspan="9">Avg Physical  : @avgPHY</td> </tr>
+            <tr> <td colspan="9">Avg Shooting  : @avgSHO</td> </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
